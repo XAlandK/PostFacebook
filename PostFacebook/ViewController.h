@@ -7,9 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Accounts/Accounts.h>
+#import <Social/Social.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController {
+    IBOutlet UITextView *Text;
+    IBOutlet UISegmentedControl *segmentedController;
+    
+    
+    SLComposeViewController *mySLComposerSheet;
+    IBOutlet UIImageView *ImageView;
+}
 
+-(IBAction)PostToFacebook:(UIButton *)sender;
+-(IBAction)segmentButton:(id)sender;
 
 @end
 

@@ -15,6 +15,8 @@
 		730D55AC1BCC672600B979A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 730D55AA1BCC672600B979A1 /* LaunchScreen.storyboard */; };
 		730D55B71BCC672600B979A1 /* PostFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 730D55B61BCC672600B979A1 /* PostFacebookTests.m */; };
 		730D55C21BCC672600B979A1 /* PostFacebookUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 730D55C11BCC672600B979A1 /* PostFacebookUITests.m */; };
+		730D55D01BCC675300B979A1 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730D55CF1BCC675300B979A1 /* Accounts.framework */; };
+		730D55D21BCC675700B979A1 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 730D55D11BCC675700B979A1 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		730D55BD1BCC672600B979A1 /* PostFacebookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PostFacebookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		730D55C11BCC672600B979A1 /* PostFacebookUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostFacebookUITests.m; sourceTree = "<group>"; };
 		730D55C31BCC672600B979A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		730D55CF1BCC675300B979A1 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		730D55D11BCC675700B979A1 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				730D55D21BCC675700B979A1 /* Social.framework in Frameworks */,
+				730D55D01BCC675300B979A1 /* Accounts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +87,8 @@
 		730D55901BCC672500B979A1 = {
 			isa = PBXGroup;
 			children = (
+				730D55D11BCC675700B979A1 /* Social.framework */,
+				730D55CF1BCC675300B979A1 /* Accounts.framework */,
 				730D559B1BCC672500B979A1 /* PostFacebook */,
 				730D55B51BCC672600B979A1 /* PostFacebookTests */,
 				730D55C01BCC672600B979A1 /* PostFacebookUITests */,
@@ -207,7 +215,7 @@
 				TargetAttributes = {
 					730D55981BCC672500B979A1 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = GV2P7P5V7Y;
+						DevelopmentTeam = FNKS3UM2FT;
 					};
 					730D55B11BCC672600B979A1 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -414,10 +422,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PostFacebook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlandK.PostFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -425,10 +437,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = PostFacebook/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.AlandK.PostFacebook;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -499,6 +515,7 @@
 				730D55C81BCC672600B979A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		730D55C91BCC672600B979A1 /* Build configuration list for PBXNativeTarget "PostFacebookTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +524,7 @@
 				730D55CB1BCC672600B979A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		730D55CC1BCC672600B979A1 /* Build configuration list for PBXNativeTarget "PostFacebookUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +533,7 @@
 				730D55CE1BCC672600B979A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
